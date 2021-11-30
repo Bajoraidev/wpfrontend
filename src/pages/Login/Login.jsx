@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Button } from "../../components";
 
-const Register = () => {
+const Login = () => {
   const [input, setInput] = useState();
 
   return (
@@ -10,7 +10,8 @@ const Register = () => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          fetch(`${process.env.REACT_APP_BASE_URL}/v1/auth/register`, {
+          console.log(input);
+          fetch(`${process.env.REACT_APP_BASE_URL}/v1/auth/login`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -19,17 +20,18 @@ const Register = () => {
           })
             .then((res) => res.json())
             .then((data) => {
-              if (data) {
-                alert("Registration was successful");
-                setInput("");
-                // e.target.reset();
+              if (data.token) {
+                window.localStorage.setItem("token", data.token);
+                //Navigate("/", { replace: true });
+                return alert(data.msg);
               }
+              return alert(data.err);
             })
             .catch((err) => alert(err.message))
             .finally(() => e.target.reset());
         }}
       >
-        <h1>Register</h1>
+        <label>Email</label>
         <input
           type="email"
           placeholder="Email.."
@@ -38,6 +40,7 @@ const Register = () => {
           }}
           required
         />
+        <label>Password</label>
         <input
           type="text"
           placeholder="Password.."
@@ -46,10 +49,10 @@ const Register = () => {
           }}
           required
         />
-        <Button type="submit">Register</Button>
+        <Button type="submit">Login</Button>
       </form>
     </div>
   );
 };
 
-export default Register;
+export default Login;

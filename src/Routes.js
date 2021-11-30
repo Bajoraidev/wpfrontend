@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { Container, Header } from "./components/index";
-import { Register } from "./pages";
+import { Register, Login } from "./pages";
 import "./index.css";
 
 const pages = [{ url: "/Register", name: "Register" }];
@@ -18,6 +18,7 @@ const PageRoutes = () => {
       <Container>
         <Routes>
           <Route path="/register" element={<Register />} />
+          <Route path="/" element={<Login />} />
           <Route path="*" element={"na"} />
         </Routes>
       </Container>
