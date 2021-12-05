@@ -32,7 +32,7 @@ const Reservation = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        alert(`Reservation success!${regions.id}`);
       })
       .catch((err) => alert(err.message));
   };
