@@ -1,38 +1,44 @@
 import React from 'react';
 import { useState } from 'react';
-import { Map } from '../../components';
+import { Map, Button } from '../../components';
 import './../../App.scss';
 
 const Reservation = () => {
   const [regions, setRegions] = useState([]);
 
   const handleRegionsClick = (e) => {
-    if (regions.includes(e.currentTarget)) {
+    /*if (regions.includes(e.currentTarget)) {
       //remove css class if item already exists
       e.currentTarget.setAttribute('class', 'yellow');
       const boss = regions.filter((region) => {
         return region.id !== e.currentTarget.id;
       });
       return setRegions([...boss]);
-    }
+    }*/
     //add css class
+    setRegions([e.currentTarget]);
     e.currentTarget.setAttribute('class', 'red');
-    return setRegions([...regions, e.currentTarget]);
+  };
+
+  const handleButtonClick = () => {
+    alert('jega');
   };
 
   return (
     <div className='app-body'>
-      {/* <WorldMap /> */}
       <div className='input-container'>
-        <label htmlFor='states-box'>Selected Workplace: </label>
+        <label htmlFor='seat-box'>Select Workplace on the map</label>
         <input
-          id='states-box'
+          id='seat-box'
           type='text'
-          defaultValue={regions.map((region) => region.id).join()}
+          defaultValue={regions.map((regions) => regions.id)}
         />
       </div>
+      <Button type='submit' handleButtonClick={handleButtonClick}>
+        Book
+      </Button>
       <div className='maps-container'>
-        <Map height={20} width={200} handleClick={handleRegionsClick} />
+        <Map height={50} width={87} handleClick={handleRegionsClick} />
       </div>
     </div>
   );

@@ -14,6 +14,7 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  border: 2px solid purple;
 }
 
 .input-container {
@@ -24,14 +25,27 @@ body {
   justify-content: space-around;
   align-items: center;
   margin-bottom: 1rem;
+  border: 1px solid blue;
 }
 .input-container input {
   width: 10rem;
   margin-top: 0.5rem;
+  border: 1px solid yellow;
 }
 
 .maps-container {
   display: flex;
   justify-content: row;
   align-items: center;
+  border: 2px solid red;
+}
+
+form {
+  border: 1px solid red;
+  text-align: center;
+}
+form input {
+  display: block;
+  margin: 2rem 0;
+  padding: 1rem;
 }
