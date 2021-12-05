@@ -21,7 +21,20 @@ const Reservation = () => {
   };
 
   const handleButtonClick = () => {
-    alert('jega');
+    fetch(`${process.env.REACT_APP_BASE_URL}/v1/reservation/`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        workplaceid: 'Workplace2',
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => alert(err.message));
   };
 
   return (
