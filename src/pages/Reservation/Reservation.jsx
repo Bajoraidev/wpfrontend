@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-import Map from '../../components/Map/Map.component';
+import { Map } from '../../components';
+import './../../App.scss';
 
 const Reservation = () => {
   const [regions, setRegions] = useState([]);
@@ -22,16 +23,16 @@ const Reservation = () => {
   return (
     <div className='app-body'>
       {/* <WorldMap /> */}
-      <div class='input-container'>
+      <div className='input-container'>
         <label htmlFor='states-box'>Selected Workplace: </label>
         <input
           id='states-box'
           type='text'
-          value={regions.map((region) => region.id).join()}
+          defaultValue={regions.map((region) => region.id).join()}
         />
       </div>
-      <div class='maps-container'>
-        <Map height={200} width={40} handleClick={handleRegionsClick} />
+      <div className='maps-container'>
+        <Map height={20} width={200} handleClick={handleRegionsClick} />
       </div>
     </div>
   );
