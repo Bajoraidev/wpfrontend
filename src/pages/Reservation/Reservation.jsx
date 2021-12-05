@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import Map from '../../components/Map/Map';
+import Map from '../../components/Map/Map.component';
 
 const Reservation = () => {
   const [regions, setRegions] = useState([]);

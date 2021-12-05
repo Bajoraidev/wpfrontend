@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export const USMapContainer = styled.div``;
+export const MapContainer = styled.div``;
 
-export const USSVGContainer = styled.svg`
+export const SVGContainer = styled.svg`
   height: ${(props) => props.height}rem;
   width: ${(props) => props.width}rem;
 

@@ -1,11 +1,11 @@
 import React from 'react';
-import { USMapContainer, USSVGContainer } from './Map.styles';
+import { MapContainer, SVGContainer } from './Map.styles';
 
 const Map = ({ height, width, handleClick }) => {
   return (
     <>
-      <USMapContainer>
-        <USSVGContainer
+      <MapContainer>
+        <SVGContainer
           id='svg'
           xmlns='http://www.w3.org/2000/svg'
           height={height}
@@ -14,6 +14,7 @@ const Map = ({ height, width, handleClick }) => {
           viewBox='0 0 800 800'
           handleChange
         >
+          <path id='Workplace123' d='M774,560.24V546.45h6.29v13.79Z' />
           <path
             id='Section3'
             d='M0,404.22V372.34H32.59v31.88Zm13.84-16.56,4.05,4.53-7.79,4.34c3.91-.23,7.19.46,9.15-.83,1.35-.89.94-4.53,1.2-6.94a9.25,9.25,0,0,0-.26-2.66c-.36-2-.22-5.18-1.31-5.69-2-.92-4.73-.26-7.16-.26l.23,1.08,5.13,2.25Z'
@@ -877,7 +878,7 @@ const Map = ({ height, width, handleClick }) => {
           />
           <path className='cls-1' d='M424.79,546.44H431v13.81h-6.24Z' />
           <path className='cls-1' d='M879.07,546.44h6.24v13.81h-6.24Z' />
-          <path className='cls-1' d='M774,560.24V546.45h6.29v13.79Z' />
+          <path id='Workplace123' d='M774,560.24V546.45h6.29v13.79Z' />
           <path
             className='cls-13'
             d='M904.54,624V591.86H938V624Zm13.13-16c2.25,1,4.12,1.45,5.34,2.59.49.45-.13,3.29-.82,3.56-1.49.57-3.35.17-5.29.17.25.54.39,1.58.93,1.88,3.08,1.7,6.07,1.49,8.14-1.54,2.17-3.2.68-6.91-3-8.84-1-.5-1.57-1.64-2.35-2.49a31.35,31.35,0,0,1,2.75-1.57A19.4,19.4,0,0,1,926,601c0-.62,0-1.24,0-1.85l-8.35-.6Z'
@@ -1277,7 +1278,6 @@ const Map = ({ height, width, handleClick }) => {
           />
           <path
             id='Workplace1'
-            className='cls-8'
             d='M1731.94,728.61c7.34.76,10.64,5.26,7.6,11.74-1.32,2.8-4.38,4.8-6.72,7.1-.26.25-1,.15-1.49,0-3.85-1.25-8.92-12.92-6.45-16.14C1726.19,729.61,1729.52,729.46,1731.94,728.61ZM1726.59,740h10.87v-7.22h-10.87Z'
           />
           <path
@@ -2858,11 +2858,8 @@ const Map = ({ height, width, handleClick }) => {
           <path className='cls-14' d='M949.13,289.9l6.26.3v12.87h-6.26Z' />
           <path className='cls-1' d='M955.36,270.9v13.56h-6.3V270.9Z' />
           <path className='cls-1' d='M1520.87,722.77h-6.3V709.08h6.3Z' />
-        </USSVGContainer>
-      </USMapContainer>
-      {/*             
-            <label htmlFor="states-box">Selected Countries: </label>
-            <input id="states-box" type="text" value={regions.map(region=>region.id).join()}/>      */}
+        </SVGContainer>
+      </MapContainer>
     </>
   );
 };
