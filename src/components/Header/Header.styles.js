@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const div = styled.div`
   //align-items: right;
@@ -14,4 +14,17 @@ export const img = styled.img`
   max-height: 5rem;
   //margin-top: 2rem;
   margin: auto 0;
+`;
+export const ul = styled.ul`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  li {
+    margin-left: 50px;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
 `;

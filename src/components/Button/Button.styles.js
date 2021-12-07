@@ -9,4 +9,5 @@ export const button = styled.button`
   background-color: #062847;
   color: white;
   border-radius: 0.2rem;
+  cursor: pointer;
 `;
