@@ -44,6 +44,7 @@ const Reservation = () => {
       .then((res) => res.json())
       .then((data) => {
         alert(`Reservation success! ${regions.map((regions) => regions.id)}`);
+        setRefetch(refetch + 1);
       })
       .catch((err) => alert(err.message));
   };
