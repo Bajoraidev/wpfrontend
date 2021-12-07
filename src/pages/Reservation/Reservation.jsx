@@ -40,17 +40,18 @@ const Reservation = () => {
 
   return (
     <div className='app-body'>
+      <h2>Select Workplace on the map</h2>
       <div className='input-container'>
-        <label htmlFor='seat-box'>Select Workplace on the map</label>
         <input
           id='seat-box'
           type='text'
           defaultValue={regions.map((regions) => regions.id)}
         />
+        <Button type='submit' handleButtonClick={handleButtonClick}>
+          Book seat
+        </Button>
       </div>
-      <Button type='submit' handleButtonClick={handleButtonClick}>
-        Book
-      </Button>
+
       <div className='maps-container'>
         <Map height={50} width={87} handleClick={handleRegionsClick} />
       </div>
