@@ -24,7 +24,7 @@ const Login = () => {
                 if (data.token) {
                   window.localStorage.setItem('token', data.token);
                   Navigate('/', { replace: true });
-                  return alert(data.msg);
+                  return alert('Success!');
                 }
                 return alert(data.err);
               })
