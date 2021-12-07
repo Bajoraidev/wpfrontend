@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Map, Button, Section, Table } from '../../components';
+import { Map, Button, Table } from '../../components';
 
 import './../../App.scss';
 
@@ -64,8 +64,8 @@ const Reservation = () => {
           </Button>
         </div>
         <div>
-          {!data && !error && <h2 className='title'>Loading...</h2>}
-          {error && <h2 className='title'>{error}</h2>}
+          {!data && !error && <h2>Loading...</h2>}
+          {error && <h2>{error}</h2>}
           {data && <Table headings={['Workplace', 'Timestamp']} data={data} />}
         </div>
       </div>
