@@ -26,7 +26,13 @@ const Header = ({ children }) => {
                   <Link
                     to={item.url}
                     onClick={() => {
+                      if (item.title === 'LOGOUT') {
+                        refreshPage();
+                        console.log(item.title);
+                      }
+                      localStorage.removeItem('token');
                       refreshPage();
+                      Navigate('/login', { replace: true });
                     }}
                   >
                     {item.title}
@@ -35,14 +41,6 @@ const Header = ({ children }) => {
               );
             })}
           </S.ul>
-          <Button
-            onClick={(e) => {
-              localStorage.removeItem('token');
-              Navigate('/', { replace: true });
-            }}
-          >
-            LOG OUT
-          </Button>
         </Container>
       </S.div>
     </>

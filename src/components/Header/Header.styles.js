@@ -20,6 +20,7 @@ export const ul = styled.ul`
   justify-content: flex-end;
   align-items: center;
   list-style: none;
+  margin-bottom: 10px;
   li {
     margin-left: 50px;
     a {

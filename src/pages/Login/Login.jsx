@@ -42,7 +42,6 @@ const Login = () => {
             required
           />
 
-          <label>Password</label>
           <input
             type='text'
             placeholder='Password..'
