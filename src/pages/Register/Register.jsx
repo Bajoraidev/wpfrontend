@@ -1,9 +1,10 @@
-import React from "react";
-import { useState } from "react";
-import { Button } from "../../components";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Button } from '../../components';
 
 const Register = () => {
   const [input, setInput] = useState();
+  const Navigate = useNavigate();
 
   return (
     <div>
@@ -11,17 +12,18 @@ const Register = () => {
         onSubmit={(e) => {
           e.preventDefault();
           fetch(`${process.env.REACT_APP_BASE_URL}/v1/auth/register`, {
-            method: "POST",
+            method: 'POST',
             headers: {
-              "Content-Type": "application/json",
+              'Content-Type': 'application/json',
             },
             body: JSON.stringify(input),
           })
             .then((res) => res.json())
             .then((data) => {
               if (data) {
-                alert("Registration was successful");
-                setInput("");
+                alert('Registration was successful');
+                setInput('');
+                Navigate('/', { replace: true });
                 // e.target.reset();
               }
             })
@@ -31,22 +33,22 @@ const Register = () => {
       >
         <h1>Register</h1>
         <input
-          type="email"
-          placeholder="Email.."
+          type='email'
+          placeholder='Email..'
           onChange={(e) => {
-            setInput({ ...input, email: e.target.value });
+            setInput({ ...input, email: e.target.value.trim().toLowerCase() });
           }}
           required
         />
         <input
-          type="text"
-          placeholder="Password.."
+          type='text'
+          placeholder='Password..'
           onChange={(e) => {
             setInput({ ...input, password: e.target.value });
           }}
           required
         />
-        <Button type="submit">Register</Button>
+        <Button type='submit'>Register</Button>
       </form>
     </div>
   );
