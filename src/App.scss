@@ -41,11 +41,22 @@ body {
 }
 
 form {
-  border: 1px solid red;
+  border: 1px solid rgb(68, 65, 65);
   text-align: center;
 }
 form input {
-  display: block;
   margin: 2rem 0;
   padding: 1rem;
+  display: block;
+  width: 100%;
+}
+.input {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  padding: 0.5rem;
+}
+.formContainer {
+  width: 50%;
+  margin: 0 auto;
 }

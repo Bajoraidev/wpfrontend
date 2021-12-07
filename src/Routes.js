@@ -12,9 +12,7 @@ const PageRoutes = () => {
   return (
     <Router>
       <Header>
-        <Container>
-          <h1>Workplace reservation</h1>
-        </Container>
+        <h1>Workplace reservation</h1>
       </Header>
       <Container>
         <Routes>

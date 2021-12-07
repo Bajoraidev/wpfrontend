@@ -1,10 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const div = styled.div`
   width: 80%;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+  //display: flex;
+  //justify-content: space-between;
+  border: 1px solid pink;
 `;
 
 /*export const div = styled.div`
