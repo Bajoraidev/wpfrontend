@@ -15,7 +15,7 @@ const Reservation = () => {
       .then((res) => res.json())
       .then((items) => {
         if (!items || items.length < 0 || items.err) {
-          return setError(items.err || 'Unknown error');
+          return setError(items.err || 'Unknown error1');
         }
         /*console.log(
           data.map((row, [index]) =>
@@ -46,7 +46,7 @@ const Reservation = () => {
       .then((res) => res.json())
       .then((items) => {
         if (!items || items.length === 0 || items.err) {
-          return setError(items.err || 'Unknown error');
+          return setError(items.err /*|| 'Unknown error2'*/);
         }
         return alert('vieta jau yra rezervuota!');
         //setData(items);

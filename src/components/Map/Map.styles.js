@@ -16,7 +16,7 @@ export const SVGContainer = styled.svg`
   }
   </style > */
 
-  circle {
+  ellipse {
     :hover {
       cursor: pointer;
     }
@@ -24,8 +24,10 @@ export const SVGContainer = styled.svg`
   rect {
     fill: #bfbfbf;
   }
+
   path {
     fill: #000;
+
     /*
     :hover {
       fill: blue;
