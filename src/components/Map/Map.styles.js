@@ -6,9 +6,27 @@ export const SVGContainer = styled.svg`
   height: ${(props) => props.height}rem;
   width: ${(props) => props.width}rem;
 
-  path {
-    fill: gray;
+  /*<style > .cls-1,
+  .cls-2 {
+    fill: #fff;
+  }
+  .cls-2 {
+    stroke: #000;
+    stroke-miterlimit: 10;
+  }
+  </style > */
 
+  circle {
+    :hover {
+      cursor: pointer;
+    }
+  }
+  rect {
+    fill: #bfbfbf;
+  }
+  path {
+    fill: #000;
+    /*
     :hover {
       fill: blue;
       cursor: pointer;
@@ -19,8 +37,8 @@ export const SVGContainer = styled.svg`
     }
 
     :focus {
-      fill: black;
-    }
+      fill: balck;
+    }*/
   }
 
   .red {

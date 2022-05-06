@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../../components';
 
-const Login = () => {
+export const Login = () => {
   const [input, setInput] = useState();
   const Navigate = useNavigate();
+  // const [currentUser, setCurrentUser] = useState();
 
   return (
     <div>
@@ -38,6 +39,8 @@ const Login = () => {
             placeholder='Email..'
             onChange={(e) => {
               setInput({ ...input, email: e.target.value });
+              //   setCurrentUser({ ...currentUser, email: e.target.value });
+              //   return currentUser;
             }}
             required
           />
@@ -60,5 +63,4 @@ const Login = () => {
     </div>
   );
 };
-
 export default Login;
